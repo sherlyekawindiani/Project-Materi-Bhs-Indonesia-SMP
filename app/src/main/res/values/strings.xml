@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Materi Bhs Indonesia SMP</string>
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="text_register">R E G I S T E R</string>
+    <string name="text_blmakun">Belum punya akun?</string>
+    <string name="btn_buatakun">Buat akun</string>
+    <string name="text_login">L O G I N</string>
+    <string name="btn_register">Daftar</string>
+    <string name="text_sdhakun">Sudah punya akun?</string>
+    <string name="text_konfirpassword">Konfirmasi password</string>
+
+</resources>
