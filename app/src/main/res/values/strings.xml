@@ -10,5 +10,6 @@
     <string name="btn_register">Daftar</string>
     <string name="text_sdhakun">Sudah punya akun?</string>
     <string name="text_konfirpassword">Konfirmasi password</string>
+    <string name="text_nama">Nama Lengkap</string>
 
 </resources>

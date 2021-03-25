@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "130000290669",
+    "project_id": "projectmateribinsmp",
+    "storage_bucket": "projectmateribinsmp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130000290669:android:8675eef39e0d724250d064",
+        "android_client_info": {
+          "package_name": "com.sherlyeka.materibhsindonesiasmp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130000290669-e5uhk2s5p6ftchth086pith9aboh9fap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9nrupBChHLnR7Cz0FrdDTQZ1-7A46siQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130000290669-e5uhk2s5p6ftchth086pith9aboh9fap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

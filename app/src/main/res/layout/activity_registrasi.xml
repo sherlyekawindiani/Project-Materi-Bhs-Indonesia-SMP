@@ -30,49 +30,39 @@
             android:orientation="vertical"
             android:paddingTop="30dp">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
-                <EditText
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/username"
-                    android:hint="@string/text_email"
-                    android:inputType="textEmailAddress"
-                    android:importantForAutofill="no" />
+            <EditText
+                android:id="@+id/inputNamalengkap"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/username"
+                android:hint="@string/text_nama"
+                android:inputType="textEmailAddress"
+                android:importantForAutofill="no" />
 
-            </android.support.design.widget.TextInputLayout>
+            <EditText
+                android:id="@+id/inputEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/email_icon"
+                android:hint="@string/text_email"
+                android:inputType="textEmailAddress"
+                android:importantForAutofill="no" />
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
-                <EditText
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:drawableStart="@drawable/lock_icon"
-                    android:hint="@string/text_password"
-                    android:inputType="numberPassword"
-                    android:importantForAutofill="no" />
-            </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:drawableStart="@drawable/lock_icon"
-                    android:hint="@string/text_konfirpassword"
-                    android:inputType="numberPassword"
-                    android:importantForAutofill="no" />
-            </android.support.design.widget.TextInputLayout>
+            <EditText
+                android:id="@+id/inputPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/lock_icon"
+                android:hint="@string/text_password"
+                android:inputType="numberPassword"
+                android:importantForAutofill="no" />
 
             <Button
+                android:id="@+id/btnkirimDaftar"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="22dp"
@@ -92,6 +82,7 @@
                 android:textSize="20sp" />
 
             <Button
+                android:id="@+id/btn_login"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="22dp"
