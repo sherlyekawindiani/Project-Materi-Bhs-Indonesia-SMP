@@ -9,7 +9,10 @@
     <string name="text_login">L O G I N</string>
     <string name="btn_register">Daftar</string>
     <string name="text_sdhakun">Sudah punya akun?</string>
-    <string name="text_konfirpassword">Konfirmasi password</string>
     <string name="text_nama">Nama Lengkap</string>
+    <string name="text_selamatDatang">Selamat Datang</string>
+    <string name="text_mulai">Mulai</string>
+    <string name="gambar_home">gambar home</string>
+    <string name="text_logout">Logout</string>
 
 </resources>

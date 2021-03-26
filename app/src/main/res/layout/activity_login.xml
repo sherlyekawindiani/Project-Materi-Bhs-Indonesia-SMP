@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -30,15 +29,14 @@
             android:orientation="vertical"
             android:paddingTop="30dp">
 
-
             <EditText
                 android:id="@+id/inputEmail"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/email_icon"
                 android:hint="@string/text_email"
-                android:inputType="textEmailAddress" />
-
+                android:inputType="textEmailAddress"
+                android:autofillHints="@string/text_email" />
 
             <EditText
                 android:id="@+id/inputPassword"
@@ -47,7 +45,8 @@
                 android:layout_marginTop="16dp"
                 android:drawableStart="@drawable/lock_icon"
                 android:hint="@string/text_password"
-                android:inputType="numberPassword" />
+                android:inputType="numberPassword"
+                android:autofillHints="@string/text_password" />
 
             <Button
                 android:id="@+id/btnkirimLogin"

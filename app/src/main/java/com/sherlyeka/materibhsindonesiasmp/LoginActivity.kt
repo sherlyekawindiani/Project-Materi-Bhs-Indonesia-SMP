@@ -2,64 +2,73 @@ package com.sherlyeka.materibhsindonesiasmp
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils
-import android.view.View
-import android.widget.Button
+import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : AppCompatActivity(), View.OnClickListener {
-    private lateinit var  btnIntent: Button
-    lateinit var  auth: FirebaseAuth
+class LoginActivity : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login);
 
-        btnIntent = findViewById(R.id.btn_buatakun)
-        btnIntent.setOnClickListener(this)
-
         auth = FirebaseAuth.getInstance()
 
-        login()
+        btnkirimLogin.setOnClickListener {
+            val email = inputEmail.text.toString().trim()
+            val password = inputPassword.text.toString().trim()
 
-    }
+            if (email.isEmpty()) {
+                inputEmail.error = "Email harus diisi"
+                inputEmail.requestFocus()
+                return@setOnClickListener
+            }
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                inputEmail.error = "Email tidak valid"
+                inputEmail.requestFocus()
+                return@setOnClickListener
+            }
+            if (password.isEmpty() || password.length < 6) {
+                inputPassword.error = "Password harus lebih dari 6 karakter"
+                inputPassword.requestFocus()
+                return@setOnClickListener
+            }
+            LoginUser(email, password)
+        }
 
-    override fun onClick(v: View) {
-        when(v.id){
-
-            R.id.btn_buatakun ->{
-                val Login = Intent(this@LoginActivity, RegistrasiActivity::class.java)
-                startActivity(Login)
+        btn_buatakun.setOnClickListener {
+            Intent(this@LoginActivity, RegistrasiActivity::class.java).also {
+                startActivity(it)
             }
         }
+
     }
 
-    private fun login() {
-        btnkirimLogin.setOnClickListener {
-            if (TextUtils.isEmpty(inputEmail.text.toString())){
-                inputEmail.setError("Masukan email")
-                return@setOnClickListener
-            }
-            else if (TextUtils.isEmpty(inputPassword.text.toString())){
-                inputPassword.setError("Masukan password")
-                return@setOnClickListener
-            }
-            auth.signInWithEmailAndPassword(inputEmail.text.toString(), inputPassword.text.toString())
-                .addOnCompleteListener {
-                    if (it.isSuccessful){
-                        startActivity(Intent(this@LoginActivity, ProfileActivity::class.java))
-                        finish()
-                    }
-                    else{
-                        Toast.makeText(this@LoginActivity, "Login gagal, coba lagi! ", Toast.LENGTH_LONG).show()
+    private fun LoginUser(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) {
+                    if (it.isSuccessful) {
+                        Intent(this@LoginActivity, UserActivity::class.java).also { intent ->
+                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            startActivity(intent)
+                        }
+                    } else {
+                        Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
                     }
                 }
+    }
 
-
-
+    override fun onStart() {
+        super.onStart()
+        if (auth.currentUser != null) {
+            Intent(this@LoginActivity, UserActivity::class.java).also { intent ->
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+            }
         }
+
     }
 }
