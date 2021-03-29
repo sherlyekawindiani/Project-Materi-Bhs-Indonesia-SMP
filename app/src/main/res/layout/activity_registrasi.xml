@@ -50,7 +50,7 @@
                 android:importantForAutofill="no" />
 
             <Button
-                android:id="@+id/btnkirimDaftar"
+                android:id="@+id/btnKirimDaftar"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="22dp"
@@ -70,7 +70,7 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/btnLogin"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="22dp"

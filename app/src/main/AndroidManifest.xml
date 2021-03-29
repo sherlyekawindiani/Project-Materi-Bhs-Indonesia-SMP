@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MateriBhsIndonesiaSMP">
-        <activity android:name=".UserActivity"></activity>
+        <activity
+            android:name=".HalamanUserActivity"
+            android:label="@string/title_activity_halaman_user"
+            android:theme="@style/Theme.MateriBhsIndonesiaSMP.NoActionBar"></activity>
+        <activity android:name=".UserActivity" />
         <activity android:name=".RegistrasiActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".HomepageActivity">

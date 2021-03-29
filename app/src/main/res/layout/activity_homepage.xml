@@ -34,7 +34,7 @@
                 android:contentDescription="@string/gambar_home" />
 
             <Button
-                android:id="@+id/btn_mulai"
+                android:id="@+id/btnMulai"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

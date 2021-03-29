@@ -3,17 +3,17 @@ package com.sherlyeka.materibhsindonesiasmp
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_homepage.*
-
+import com.sherlyeka.materibhsindonesiasmp.databinding.ActivityHomepageBinding
 
 
 class HomepageActivity : AppCompatActivity() {
-
+    private lateinit var binding: ActivityHomepageBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_homepage);
+        binding = ActivityHomepageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        btn_mulai.setOnClickListener {
+      binding.btnMulai.setOnClickListener {
             Intent( this@HomepageActivity, LoginActivity::class.java).also {
                 startActivity(it)
             }
