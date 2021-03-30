@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Materi Bhs Indonesia SMP</string>
+    <string name="app_name">Materi.mu</string>
     <string name="text_email">Email</string>
     <string name="text_password">Password</string>
     <string name="btn_login">Login</string>

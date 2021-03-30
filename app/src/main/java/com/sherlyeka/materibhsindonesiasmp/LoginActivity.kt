@@ -64,17 +64,7 @@ class LoginActivity : AppCompatActivity() {
                 }
     }
 
-    override fun onStart() {
-        super.onStart()
-        if (auth.currentUser != null) {
-            Intent(this@LoginActivity, HalamanUserActivity::class.java).also {
-                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or  Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(it)
-            }
 
-        }
-
-    }
 
 
 }
