@@ -54,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { it ->
                     if (it.isSuccessful) {
-                        Intent(this@LoginActivity, HalamanUserActivity::class.java).also {
+                        Intent(this@LoginActivity, NavigationDrawerActivity::class.java).also {
                             it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or  Intent.FLAG_ACTIVITY_CLEAR_TASK
                             startActivity(it)
                         }
